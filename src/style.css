@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* white overlay for the background behind the card  */
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, #527853 50%, #527853 50%);
+}
+
+.card {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: 70vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 48px 32px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* unavailable product */
+.product-unavailable-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-unavailable-container > .product-details {
+  text-align: center;
+  z-index: 2;
+}
+
+.product-unavailable-container .cta-next {
+  margin: 0px auto;
+  border: 2px solid black;
+  color: black;
+  border-radius: 7px;
+}
+
+/* available product informations*/
+.product-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 65%;
+  gap: 16px;
+  height: 100%;
+}
+
+.product-thumbnail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-thumbnail > img {
+  width: 60%;
+}
+
+.product-details {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-details .title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.product-details .sub-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 16px;
+  color: black;
+  padding-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+
+.product-details .rating {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.circle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #dcdcdc;
+}
+
+.font-men {
+  color: #637e76;
+}
+
+.font-women {
+  color: #720060;
+}
+
+.bg-rating-men {
+  background-color: #637e76;
+}
+
+.bg-rating-women {
+  background-color: #720060;
+}
+
+.product-details .description {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 14px;
+  color: black;
+}
+
+.product-details > .bottom {
+  padding-top: 16px;
+  border-top: 1px solid black;
+}
+
+.product-details .price {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* buttons */
+.cta {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.cta > .cta-buy-men {
+  width: 25%;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: #637e76;
+  color: #ffffff;
+}
+
+.cta > .cta-buy-women {
+  width: 35%;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: #720060;
+  color: #ffffff;
+}
+
+.cta > .cta-next-men {
+  background-color: #fff;
+  color: #637e76;
+  border: solid 2px #637e76;
+  width: 25%;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta > .cta-next-women {
+  background-color: #fff;
+  color: #720060;
+  border: solid 2px #720060;
+  width: 25%;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta > .cta-next-none {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+  margin: 0px auto;
+  width: 25%;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bg-men {
+  background: #f7b787;
+  border-radius: 5px;
+}
+
+.bg-women {
+  background: #f7b787;
+  border-radius: 5px;
+}
+
+.bg-none {
+  background: #f7b787;
+  border-radius: 5px;
+}
+
+/* spinner styles */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+.bg-spinner {
+  background: #fff;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
